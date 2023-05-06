@@ -8,38 +8,45 @@
     <title>Document</title>
 </head>
 <body class="container mt-5">
+<<<<<<< HEAD
     <header><img src="./header.png" alt="header"></header>
+  <div class='flex'><h2>GNUBERPLUG</h2><span>...Place an Order</span></div>
+=======
+    <header><img src="./header.png" alt="header"></header>
+>>>>>>> 1c97e83f95f570a1a9e3f7dedd750c130a0d237a
     <form id="discord-form">
-        <h2>GNUBERPLUG - Place an Order</h2>
-        <p>What kind of order do you want to place?</p>
-        <input type="radio" id="option1" name="option" value="UberEats Delivery ($35 Min/Max)">
-        <label for="option1">UberEats Delivery ($35 Min/Max)</label><br>
+
+        <div class='flexx'><label for='option'>What kind of order do you want to place?</label>
+      <div class='unflex'> <input type="radio" id="option1" name="option" value="UberEats Delivery ($35 Min/Max)">
+        <label class='lol' for="option1">UberEats Delivery ($35 Min/Max)</label><br>
         <input type="radio" id="option2" name="option" value="UberEats Pickup ($25 Min/Max)">
-        <label for="option2">UberEats Pickup ($25 Min/Max)</label><br>
+        <label class='lol' for="option2">UberEats Pickup ($25 Min/Max)</label><br>
         <input type="radio" id="option3" name="option" value="[UNFINISHED] Uber Ride ($20-$25 Min/Max)">
-        <label for="option3">[UNFINISHED] Uber Ride ($20-$25 Min/Max)</label><br>
+        <label class='lol' for="option3">[UNFINISHED] Uber Ride ($20-$25 Min/Max)</label><br>
         <input type="radio" id="option4" name="option" value="[UNFINISHED] Instacart Delivery/Pickup ($25-$30 Min/Max)">
-        <label for="option4">[UNFINISHED] Instacart Delivery/Pickup ($25-$30 Min/Max)</label><br>
-        <br>
-        <label for="name">What is the name you want the order to be under?<br>(Include First/Last Name)</label><br>
-        <input type="text" id="fname" name="name" required>
-        <br>
-        <label for="address">What is the address for the order?<br>(Add Delivery Instructions/Phone Number Here)</label><br>
+        <label class='lol' for="option4">[UNFINISHED] Instacart Delivery/Pickup ($25-$30 Min/Max)</label><br>
+        </div></div>
+        
+      <div class='flexx'><label for="name">What is the name you want the order to be under?<br>(Include First/Last Name)</label>
+        <input type="text" id="fname" name="name" required></div>
+        
+       <div class='flexx'><label for="address">What is the address for the order?<br>(Add Delivery Instructions/Phone Number Here)</label>
         <input type="text" id="address" name="address" required>
-        <br>
-        <label for="restaurant">What is the restaurant?<br>(Include Address If Many)</label><br>
-        <input type="text" id="restaurant" name="restaurant" required>
-        <br>
-        <label for="telegram">What is your Telegram @?<br>(Contact Method for Us)<br>(Leave Blank if You Are Contacting Us Through Snapchat)</label><br>
-        <input type="text" id="telegram" name="telegram">
-        <br>
-        <label for="snapchat">What is your Snapchat @?<br>(Contact Method for Us)<br>(Leave Blank if You Are Contacting Us Through Telegram)</label><br>
-        <input type="text" id="snapchat" name="snapchat">
-        <br>
-        <label for="done">Before you finish this form, be sure to send me a screenshot of your order you created on UberEats.
-        <br>Make sure to split up the order into multiple screenshots if you are placing multiple orders!<br><br><a href="https://telegra.ph/GNUBERPLUG--TOS-02-19" target="_blank">Click "Done" after you have read our TOS</a></label><br>
-        <input type="checkbox" id="done" name="done" required>
-        <label for="done">Done</label><br>
+        </div>
+        
+        <div class='flexx'><label for="restaurant">What is the restaurant?<br>(Include Address If Many)</label>
+          <input type="text" id="restaurant" name="restaurant" required></div>
+        
+        <div class='flexx'><label for="telegram">What is your Telegram @?<br>(Contact Method for Us)<br>(Leave Blank if You Are Contacting Us Through Snapchat)</label>
+        <input placeholder="@[Telegram Handle]" type="text" id="telegram" name="telegram">
+      </div>
+        <div class='flexx'><label for="snapchat">What is your Snapchat @?<br>(Contact Method for Us)<br>(Leave Blank if You Are Contacting Us Through Telegram)</label>
+        <input placeholder="@[Snap Handle]" type="text" id="snapchat" name="snapchat">
+      </div>
+        <label for="done" class='lower'>Before you finish this form, be sure to send me a screenshot of your order you created on UberEats.
+        <br>Make sure to split up the order into multiple screenshots if you are placing multiple orders!<br><br><a href="https://telegra.ph/GNUBERPLUG--TOS-02-19" target="_blank">Click "Done" after you have read our TOS</a></label>
+        <div class='unflexx'><input type="checkbox" id="done" name="done" required>
+          <label for="done">Done</label></div>
         <br>
         <input type="submit" value="Submit">
     </form>
