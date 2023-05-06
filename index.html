@@ -18,10 +18,31 @@
         <label for="option2">Option 2</label><br>
         <input type="radio" id="option3" name="option" value="Option 3">
         <label for="option3">Option 3</label><br>
-        <input type="text">
+        <label for="message">Message:</label><br>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+        <br>
         <br>
         <input type="submit" value="Submit">
       </form>
 </body>
+<script>
+    // get the message content from the form input
+const message = document.getElementById('message').value;
 
+// construct the webhook payload
+const payload = {
+  content: message
+};
+
+// send the payload to the webhook
+fetch('https://discord.com/api/webhooks/WEBHOOK_ID/WEBHOOK_TOKEN', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(payload)
+})
+  .then(response => console.log(response))
+  .catch(error => console.error(error));
+</script>
 </html>
