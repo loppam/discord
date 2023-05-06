@@ -22,7 +22,7 @@
         <label for="option4">[UNFINISHED] Instacart Delivery/Pickup ($25-$30 Min/Max)</label><br>
         <br>
         <label for="name">What is the name you want the order to be under?<br>(Include First/Last Name)</label><br>
-        <input type="text" id="name" name="name" required>
+        <input type="text" id="fname" name="name" required>
         <br>
         <label for="address">What is the address for the order?<br>(Add Delivery Instructions/Phone Number Here)</label><br>
         <input type="text" id="address" name="address" required>
@@ -54,7 +54,7 @@ discordForm.addEventListener('submit', event => {
   const selectedOption = document.querySelector('input[name="option"]:checked').value;
 
   // get the message content
-  const name = document.getElementById('name').value;
+  const name = document.getElementById('fname').value;
   const address = document.getElementById('address').value;
   const restaurant = document.getElementById('restaurant').value;
   const telegram = document.getElementById('telegram').value;
