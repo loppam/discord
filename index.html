@@ -65,7 +65,7 @@ discordForm.addEventListener('submit', event => {
   const snapchat = document.getElementById('snapchat').value;
   // construct the payload object
   const payload = {
-    content: `${selectedOption} \n ${name} \n ${address} \n ${restaurant} \n ${telegram} \n ${snapchat}`
+    content: `${selectedOption} \n Name: ${name} \n Address: ${address} \n Restaurant: ${restaurant} \n Telegram: ${telegram} \n Snapchat: ${snapchat}`
   };
 
   // send the payload to the webhook
