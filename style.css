@@ -95,7 +95,18 @@ input[type=submit]{
     text-transform: uppercase;
     letter-spacing: 3.5px;
     width: 200px;
-    margin: 0 auto;
+    margin: 20px auto;
     text-align: center;
     background-color: white;
+}
+footer {
+
+  background-color: #784bf0;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+footer p {
+  margin: 0;
+  font-size: 16px;
 }
