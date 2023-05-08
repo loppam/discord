@@ -86,10 +86,16 @@ input[type=radio]{
 font-size: 28px;
 }
 input[type=submit]{
-color:black;
-background-color: white;
-margin: 0 auto;
-font-size: 25px;
-padding: 10px 40px;
-border-radius: 20px;
+  border-radius: 20px;
+  padding: 10px 25px;
+  color: #784bf0;
+  font-weight: normal;
+  display: block;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 3.5px;
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
 }
