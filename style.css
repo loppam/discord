@@ -98,6 +98,7 @@ input[type=submit]{
     margin: 20px auto;
     text-align: center;
     background-color: white;
+    border: none;
 }
 footer {
 
