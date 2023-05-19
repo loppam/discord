@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body class="container mt-5">
+    <header><img src="./header.png" alt="header"></header>
+  <div class='flex'><h2>GNUBERPLUG</h2><span>...Place an Order</span></div>
+    <form id="discord-form">
+
+        <div class='flexx'><label for='option'>What kind of order do you want to place?</label>
+      <div class='unflex'> <input type="radio" id="option1" name="option" value="UberEats Delivery ($35 Min/Max)">
+        <label class='lol' for="option1">UberEats Delivery ($35 Min/Max)</label><br>
+        <input type="radio" id="option2" name="option" value="UberEats Pickup ($25 Min/Max)">
+        <label class='lol' for="option2">UberEats Pickup ($25 Min/Max)</label><br>
+        <input type="radio" id="option3" name="option" value="[UNFINISHED] Uber Ride ($20-$25 Min/Max)">
+        <label class='lol' for="option3">[UNFINISHED] Uber Ride ($20-$25 Min/Max)</label><br>
+        <input type="radio" id="option4" name="option" value="[UNFINISHED] Instacart Delivery/Pickup ($25-$30 Min/Max)">
+        <label class='lol' for="option4">[UNFINISHED] Instacart Delivery/Pickup ($25-$30 Min/Max)</label><br>
+        </div></div>
+        
+      <div class='flexx'><label for="name">What is the name you want the order to be under?<br>(Include First/Last Name)</label>
+        <input type="text" id="fname" name="name" required></div>
+        
+       <div class='flexx'><label for="address">What is the address for the order?<br>(Add Delivery Instructions/Phone Number Here)</label>
+        <input type="text" id="address" name="address" required>
+        </div>
+        
+        <div class='flexx'><label for="restaurant">What is the restaurant?<br>(Include Address If Many)</label>
+          <input type="text" id="restaurant" name="restaurant" required></div>
+        
+        <div class='flexx'><label for="telegram">What is your Telegram @?<br>(Contact Method for Us)<br>(Leave Blank if You Are Contacting Us Through Snapchat)</label>
+        <input placeholder="@[Telegram Handle]" type="text" id="telegram" name="telegram">
+      </div>
+        <div class='flexx'><label for="snapchat">What is your Snapchat @?<br>(Contact Method for Us)<br>(Leave Blank if You Are Contacting Us Through Telegram)</label>
+        <input placeholder="@[Snap Handle]" type="text" id="snapchat" name="snapchat">
+      </div>
+        <label for="done" class='lower'>Before you finish this form, be sure to send me a screenshot of your order you created on UberEats.
+        <br>Make sure to split up the order into multiple screenshots if you are placing multiple orders!<br><br><a href="https://telegra.ph/GNUBERPLUG--TOS-02-19" target="_blank">Click "Done" after you have read our TOS</a></label>
+        <div class='unflexx'><input type="checkbox" id="done" name="done" required>
+          <label for="done">Done</label></div>
+        <br>
+        <input type="submit" value="Submit">
+    </form>
+    <footer>
+      <p>&copy; GNUBERPLUG</p>
+    </footer>
+</body>
+<script>
+const discordForm = document.getElementById('discord-form');
+// add an event listener to the form submit event
+discordForm.addEventListener('submit', event => {
+  // prevent the form from submitting normally
+  event.preventDefault();
+
+  // get the selected option
+  const selectedOption = document.querySelector('input[name="option"]:checked').value;
+
+  // get the message content
+  const name = document.getElementById('fname').value;
+  const address = document.getElementById('address').value;
+  const restaurant = document.getElementById('restaurant').value;
+  const telegram = document.getElementById('telegram').value;
+  const snapchat = document.getElementById('snapchat').value;
+  // construct the payload object
+  const payload = {
+    content: `${selectedOption} \n Name: ${name} \n Address: ${address} \n Restaurant: ${restaurant} \n Telegram: ${telegram} \n Snapchat: ${snapchat}`
+  };
+
+  // send the payload to the webhook
+  fetch('https://discord.com/api/webhooks/1104339163618234448/sgGGCWY87B61TLrRJccGIheCNkZnQjEDKk1XM52J3GB9dBjdvj4fVUDhr2vWTdP_m_er', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(payload)
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Message sent successfully!');
+      } else {
+        console.error('Failed to send message:', response.statusText);
+      }
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+</html>
